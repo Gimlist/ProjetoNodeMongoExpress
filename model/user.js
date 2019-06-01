@@ -25,7 +25,7 @@ UserSchema.pre('save', async function (next) {
     if (!user.isModified('password')) return next();
 
     //função para criptografar senha, com 10 processos de encriptação
-    user.password = bcrypt.hash(user.password, 10);
+    user.password = await bcrypt.hash(user.password, 10);
     //segue para o próximo
     return next();
 });

@@ -4,12 +4,12 @@ const express = require('express');
 const app = express();
 //mongoose é usado para fazer a modelagem do BD no node.js
 const mongoose = require('mongoose');
-
 //Body-Parser é usado para o codificar e decodificar o objeto Json no app
 const bodyParser = require('body-parser');
-
+//Arquivo de configuração
+const config = require('./config/config'); 
 //string de conexão mongodb+srv://usuario_admin:<password>@clusterapi-pwrch.mongodb.net/test?retryWrites=true
-const urlDb = 'mongodb+srv://usuario_admin:<SenhaMongo>@clusterapi-pwrch.mongodb.net/test?retryWrites=true';
+const urlDb = config.db_string;
 
 //Opções de Banco de dados, reconnectTries -> tentativas de reconexão, reconnectInterval -> intervalo de conexão 500 milisegundos, poolsize -> tamanho do pool, 5 por padrão, useNewUrlParser -> evita retornar mensagens de atualizações do mongoose
 const options ={ reconnectTries: Number.MAX_VALUE, reconnectInterval:500, poolSize: 5, useNewUrlParser: true};
