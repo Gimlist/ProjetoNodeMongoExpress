@@ -6,19 +6,19 @@ const config = () => {
     switch (env) {
         case 'dev':
             return {
-                db_string :'mongodb+srv://usuario_admin:S3nh4_Tr0v40@clusterapi-pwrch.mongodb.net/test?retryWrites=true',
+                db_string :'mongodb+srv://usuario_admin:<senhabanco>@urlbanco',
                 jwt_pass: 'senhadowebt0ken',
                 jwt_expires_in: '7d' 
             }
         case 'hml':
             return {
-                db_string :'mongodb+srv://usuario_admin:S3nh4_Tr0v40@clusterapi-pwrch.mongodb.net/hml?retryWrites=true',
+                db_string :'mongodb+srv://usuario_admin:<senhabanco>@urlbanco',
                 jwt_pass: 'senhadowebt0kenHml',
                 jwt_expires_in: '7d' 
             }
         case 'prod':
             return {
-                db_string :'mongodb+srv://usuario_admin:S3nh4_Tr0v40@clusterapi-pwrch.mongodb.net/prod?retryWrites=true',
+                db_string :'mongodb+srv://usuario_admin:<senhabanco>@urlbanco',
                 jwt_pass: 'AhpTrpj7KvzzHYM3T9tQH3HEhQxyvqNHXtNVrLFNUcuFtnPkQs',
                 jwt_expires_in: '7d' 
             }
